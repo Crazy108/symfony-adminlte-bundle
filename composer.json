@@ -1,5 +1,5 @@
 {
-    "name": "crazy108/adminltebundle",
+    "name": "crazy108/symfony-adminlte-bundle",
     "type": "symfony-bundle",
     "description": "Admin theme bundle for Symfony 4 based on AdminLTE 3",
     "keywords": ["adminlte", "admin-lte", "adminlte3", "symfony", "bundle", "symfony-bundle", "twig", "admin", "template", "templates"],
