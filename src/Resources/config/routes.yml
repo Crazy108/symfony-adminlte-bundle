@@ -1,0 +1,7 @@
+controllers:
+    resource: '../src/Controller/'
+
+index:
+    path: /
+    controller: AdminLTEBundle\Controller\DefaultController::index
+    methods:    GET|HEAD|OPTIONS

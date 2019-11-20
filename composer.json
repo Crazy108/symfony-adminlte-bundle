@@ -1,0 +1,78 @@
+{
+    "name": "crazy108/adminltebundle",
+    "type": "symfony-bundle",
+    "description": "Admin theme bundle for Symfony 4 based on AdminLTE 3",
+    "keywords": ["adminlte", "admin-lte", "adminlte3", "symfony", "bundle", "symfony-bundle", "twig", "admin", "template", "templates"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksey Gladkov",
+            "homepage": "https://github.com/crazy108"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "symfony/flex": "^1.3.1",
+        "sensio/framework-extra-bundle": "^5.2",
+        "symfony/yaml": "^4.1",
+        "symfony/asset": "4.3.*"
+    },
+    "require-dev": {
+        "almasaeed2010/adminlte": "3.0.0",
+        "sensiolabs/security-checker": "^6.0",
+        "matthiasnoback/symfony-config-test": "^4.0",
+        "phpstan/phpstan": "^0.11",
+        "friendsofphp/php-cs-fixer": "^2.15"
+
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "AdminLTEBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AdminLTEBundle\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "security-checker security:check": "script"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "tests": "vendor/bin/phpunit Tests/",
+        "phpstan": "vendor/bin/phpstan analyse . --level=5",
+        "codestyle": "vendor/bin/php-cs-fixer fix --dry-run --verbose --show-progress=none",
+        "codestyle-fix": "vendor/bin/php-cs-fixer fix"
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "4.3.*"
+        }
+    }
+}
